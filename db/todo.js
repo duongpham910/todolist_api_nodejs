@@ -44,7 +44,12 @@ module.exports = {
   getTodos: (callback) => {
     //async
     Todo.find().exec((err, todos) => {
-      callback(todos)
+      callback(todos);
+    });
+  },
+  findTodoById: (id, callback) => {
+    Todo.findOne({'id': id}).exec((err, todo) => {
+      callback(todo);
     });
   }
 }

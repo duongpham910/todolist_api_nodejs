@@ -34,7 +34,7 @@ app.get('/todos/:id', function(req, res) {
 
   todo.getTodos((todos) => {
     todos.forEach(function(todo) {
-      if (todo._id == todoId) {
+      if (todo.id == todoId) {
         todoItem = todo;
       }
     });
